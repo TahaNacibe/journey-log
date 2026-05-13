@@ -1,5 +1,6 @@
-import CustomTitleBar from "./controller";
+import CustomTitleBar from "./window_controller";
 import { ThemeProvider } from "next-themes";
+import HomeWrapper from "./wrappers/home_wrapper";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -9,7 +10,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       enableSystem
       storageKey="theme"
     >
-      <CustomTitleBar>{children}</CustomTitleBar>
+      <CustomTitleBar>
+        <HomeWrapper>{children}</HomeWrapper>
+      </CustomTitleBar>
     </ThemeProvider>
   );
 }

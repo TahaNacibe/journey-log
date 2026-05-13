@@ -1,5 +1,6 @@
 import { Maximize, Minus, X } from "lucide-react";
 import { ReactNode } from "react";
+import AppMenuBar from "./app_menubar";
 
 export default function CustomTitleBar({ children }: { children: ReactNode }) {
   const handleWindow = (action: "minimize" | "maximize" | "close") => {
@@ -13,7 +14,11 @@ export default function CustomTitleBar({ children }: { children: ReactNode }) {
         className="flex items-center justify-between bg-background border-b"
         style={{ WebkitAppRegion: "drag" } as any}
       >
-        <div className="text-sm font-medium pl-3">Electron App</div>
+        <div style={{ WebkitAppRegion: "no-drag" } as any}>
+          <AppMenuBar />
+        </div>
+
+        {/* ===================================================================== */}
         <div
           className="flex items-center"
           style={{ WebkitAppRegion: "no-drag" } as any}
@@ -40,7 +45,7 @@ export default function CustomTitleBar({ children }: { children: ReactNode }) {
       </div>
 
       {/* Content */}
-      <div className="flex-1 overflow-auto">{children}</div>
+      <div className="flex-1 overflow-hidden">{children}</div>
     </div>
   );
 }

@@ -1,0 +1,1 @@
+type ThemeMode = "Dark" | "Light" | "System"
