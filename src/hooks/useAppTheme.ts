@@ -3,7 +3,7 @@ import { readFromStorage, saveToStorage } from "@/lib/storage";
 import { useTheme } from "next-themes";
 
 const THEME_STORAGE_KEY = "theme";
-const DEFAULT_THEME_VALUE = "System";
+const DEFAULT_THEME_VALUE = "system";
 
 export function useAppTheme() {
   const { theme, resolvedTheme, setTheme: setNextTheme } = useTheme();

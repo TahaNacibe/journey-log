@@ -3,6 +3,7 @@ import MainPage from "./app/page";
 import PageNotFound from "./404";
 import { useAppTheme } from "./hooks/useAppTheme";
 import { useEffect } from "react";
+import FinancesPage from "./app/finances/page";
 
 function App() {
   // ============== LOAD THEME =================
@@ -14,6 +15,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />
+      <Route path="/finances" element={<FinancesPage />} />
 
       {/* =========== STATIC PAGES ============== */}
       <Route path="*" element={<PageNotFound />} />

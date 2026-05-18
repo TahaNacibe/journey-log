@@ -34,6 +34,8 @@ function createWindow() {
 		minWidth: 600,
 		frame: false,
 		show: false,
+		transparent: true,
+		backgroundColor: "#00000000",
 		webPreferences: {
 			contextIsolation: true,
 			nodeIntegration: false,

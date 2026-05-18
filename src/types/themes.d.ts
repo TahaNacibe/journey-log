@@ -1,1 +1,1 @@
-type ThemeMode = "Dark" | "Light" | "System"
+type ThemeMode = "dark" | "light" | "system"
